@@ -1,0 +1,137 @@
+.main-container {
+  width: 800px;
+  height: 500px;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 1px solid #333;
+  justify-content: center;
+}
+.header {
+  height: 20%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.bubble-bottom {
+  margin-top: 15px;
+  --size: 50px;
+  position: relative;
+  width: var(--size);
+  height: calc(var(--size) * 0.66);
+  background: #333;
+  border-radius: 10px;
+  color: antiquewhite;
+  text-align: center;
+  font-family: "Montserrat";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.bubble-bottom:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: calc(var(--size) * 0.13) solid transparent;
+  border-top-color: #333;
+  border-bottom: 0;
+  margin-left: calc(var(--size) * 0.13 * -1);
+  margin-bottom: calc(var(--size) * 0.13 * -1);
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.content {
+  height: 60%;
+}
+.footer-btn {
+  height: 20%;
+}
+.header p {
+  font-family: "Montserrat";
+  font-size: 10px;
+  font-weight: 500;
+}
+.dropdown-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background-color: #d59f26;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px #d59f26 solid;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: "Montserrat";
+  font-weight: 500;
+  min-width: 20em;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #b78953;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+#myDropdown {
+  background-color: #ffffff;
+  border: 2px #d59f26 solid;
+  border-radius: 0.5em;
+  padding: 1em;
+  min-width: 14.5em;
+  margin: 47px;
+  height: 350%;
+  overflow-y: scroll;
+}
+#myDropdown::-webkit-scrollbar-thumb{
+  background-color: transparent;
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgba(213, 159, 38, 1) 0%,
+    rgba(213, 159, 38, 1) 25%,
+    transparent 100%,
+    rgba(213, 159, 38, 1) 75%,
+    transparent);
+}
+::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(transparent, rgba(183, 137, 83, 0.8));
+  background: linear-gradient(transparent, rgba(183, 137, 83, 0.8));
+}
+::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(transparent, #e96400);
+  background: linear-gradient(transparent, #e96400);
+  border-radius: 20px;
+}
+
+/* Show the dropdown content when clicked */
+.show {
+  display: block;
+}
